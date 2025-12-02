@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brad’s Affiliate Gadgets</title>
+  <meta name="description" content="Curated Amazon finds that make life easier.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;          /* deep slate */
+      --text: #e5e7eb;        /* light gray */
+      --muted: #cbd5e1;       /* muted text */
+      --accent: #38bdf8;      /* sky blue */
+      --accent-dark: #0ea5e9; /* darker sky blue */
+      --card: #111827;        /* card background */
+      --border: #1f2937;      /* subtle border */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; border-radius: 12px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    /* Header */
+    header { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(15,23,42,0.7); border-bottom: 1px solid var(--border); z-index: 50; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
+    .brand { font-weight: 800; letter-spacing: 0.2px; }
+    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--accent); color: #072b3a; font-weight: 700; }
+    .cta:hover { background: var(--accent-dark); }
+    /* Hero */
+    .hero { padding: 60px 20px 30px; text-align: center; }
+    .hero h1 { font-size: clamp(28px, 6vw, 48px); margin: 0 0 10px; }
+    .hero p { color: var(--muted); font-size: clamp(16px, 3.5vw, 20px); margin: 0 auto 22px; max-width: 700px; }
+    .hero .buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 12px 18px; border-radius: 12px; font-weight: 700; border: 1px solid var(--border); background: var(--card); color: var(--text); }
+    .btn-primary { background: var(--accent); color: #062a3a; border-color: transparent; }
+    .btn-primary:hover { background: var(--accent-dark); }
+    /* Product section */
+    section { padding: 30px 20px; }
+    .card { background: linear-gradient(180deg, #0b1225, #0f172a); border: 1px solid var(--border); border-radius: 16px; padding: 22px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: center; }
+    .card h2 { margin: 0 0 8px; font-size: 24px; }
+    .price { color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+    .bullets { list-style: none; padding: 0; margin: 0 0 16px; }
+    .bullets li { margin: 8px 0; padding-left: 26px; position: relative; color: var(--muted); }
+    .bullets li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+    /* Benefits grid */
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .benefit { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; }
+    .benefit h3 { margin: 8px 0 6px; font-size: 18px; }
+    .benefit p { margin: 0; color: var(--muted); }
+    /* Social proof */
+    .quote { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; font-style: italic; color: var(--muted); }
+    /* Footer CTA */
+    .footer-cta { text-align: center; padding: 40px 20px 60px; }
+    .footer-cta p { color: var(--muted); margin: 6px 0 16px; }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .card { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .grid3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="brand">Brad’s Gadgets</div>
+      <a class="cta" href="https://www.amazon.com/dp/YOUR-ASIN-HERE?tag=YOURTAG-20">Shop now</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Discover smart gadgets that make life easier</h1>
+      <p>Curated Amazon finds for convenience, style, and value — hand‑picked to upgrade your daily routine without the guesswork.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://www.amazon.com/dp/YOUR-ASIN-HERE?tag=YOURTAG-20">Buy on Amazon</a>
+        <a class="btn" href="#featured">See featured pick</a>
+      </div>
+    </section>
+
+    <section id="featured" class="container">
+      <div class="card">
+        <div>
+          <img src="images/product-hero.jpg" alt="Featured gadget photo">
+        </div>
+        <div>
+          <h2>Featured pick: Smart Home Hub</h2>
+          <div class="price">From $59 • Free returns</div>
+          <ul class="bullets">
+            <li>Voice control for lights, music, and routines</li>
+            <li>Pairs in minutes — no complicated setup</li>
+            <li>Compact design fits any room aesthetic</li>
+          </ul>
+          <a class="btn btn-primary" href="https://www.amazon.com/dp/YOUR-ASIN-HERE?tag=YOURTAG-20">Buy on Amazon</a>
+          <p style="margin-top:10px; font-size:13px; color:#93c5fd;">As an Amazon Associate I earn from qualifying purchases.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="grid3">
+        <div class="benefit">
+          <div style="font-size:28px;">⏱️</div>
+          <h3>Saves time</h3>
+          <p>Automate daily tasks in seconds.</p>
+        </div>
+        <div class="benefit">
+          <div style="font-size:28px;">💵</div>
+          <h3>Great value</h3>
+          <p>Top picks under a fair budget.</p>
+        </div>
+        <div class="benefit">
+          <div style="font-size:28px;">📈</div>
+          <h3>Trending</h3>
+          <p>Curated from what buyers love now.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="quote">“I thought smart gadgets were complicated — Brad’s pick worked right out of the box.”</div>
+    </section>
+
+    <section class="footer-cta">
+      <h2>Ready to upgrade your routine?</h2>
+      <p>Grab the featured pick or browse the collection — it’s all vetted for ease and value.</p>
+      <a class="btn btn-primary" href="https://www.amazon.com/dp/YOUR-ASIN-HERE?tag=YOURTAG-20">Shop the collection</a>
+    </section>
+  </main>
+</body>
+</html>
